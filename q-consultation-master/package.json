@@ -1,0 +1,33 @@
+{
+  "name": "q-consultation",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Injoit LTD",
+    "email": "sales@quickblox.com"
+  },
+  "scripts": {
+    "dev": "lerna run dev",
+    "dev:api": "lerna run --scope @qc-apps/api dev",
+    "dev:client": "lerna run --scope @qc-apps/client dev",
+    "dev:provider": "lerna run --scope @qc-apps/provider dev",
+    "build": "lerna run --scope '@qc-apps/*' build",
+    "start:api": "lerna run --scope @qc-apps/api start",
+    "start:doc": "lerna run --scope @qc-doc/docusaurus start",
+    "start:pages": "lerna run --scope @qc-apps/integration-pages start",
+    "lint": "lerna run lint",
+    "init:config": "lerna run --scope @qc/bin init:config",
+    "init:schema": "lerna run --scope @qc/bin init:schema",
+    "version": "lerna version --no-push --no-git-tag-version"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "documentation"
+  ],
+  "devDependencies": {
+    "lerna": "^7.1.5",
+    "prettier": "^2.4.0"
+  },
+  "packageManager": "yarn@3.6.3"
+}
